@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static%}
+<style>
+    /* Custom style to prevent carousel from being distorted 
+       if for some reason image doesn't load */
+.back{
+    background-color: #080808;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.carousel-item{
+        min-height: 280px;
+    }
+</style>
+<div class = back>
+    <div class="container-lg my-3">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+            </ol>
+            
+            <!-- Wrapper for carousel items -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://i.ytimg.com/vi/N6cFknYffdI/maxresdefault.jpg" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.ytimg.com/vi/1aqI7EnfbVM/maxresdefault.jpg" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/013/818/441/large/deepak-rawat-deepak-rawat-aaa.jpg?1541211003" class="d-block w-100" alt="Slide 3">
+                </div>
+            </div>
+    
+            <!-- Carousel controls -->
+            <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

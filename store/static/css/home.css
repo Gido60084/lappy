@@ -1,0 +1,12 @@
+*{
+ margin: 0;
+ }
+
+.back{
+    background-color: #080808;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.carousel-item{
+        min-height: 100px;
+    }

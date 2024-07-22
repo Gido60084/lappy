@@ -1,21 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% load static%}
-<style>
-    /* Custom style to prevent carousel from being distorted 
-       if for some reason image doesn't load */
-.back{
-    background-color: #080808;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-.carousel-item{
-        min-height: 280px;
-    }
-</style>
-<div class = back>
-    <div class="container-lg my-3">
+{% load static %}
+    
+<div class = 'back' >
+    <div class="header">
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
             <!-- Carousel indicators -->
             <ol class="carousel-indicators">

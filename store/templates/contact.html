@@ -1,88 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Contact Us</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .contact-details, .contact-form {
-            margin-bottom: 20px;
-        }
-
-        .contact-details p, .contact-details a {
-            margin: 10px 0;
-        }
-
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .contact-form button {
-            background-color: #0056b3;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .contact-form button:hover {
-            background-color: #003d80;
-        }
-
-        .map {
-            margin: 20px 0;
-        }
-
-        .map iframe {
-            width: 100%;
-            border: none;
-            border-radius: 5px;
-        }
-
-        .whatsapp-link {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #25D366;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .whatsapp-link:hover {
-            background-color: #1ebe57;
-        }
-    </style>
-</head>
-<body>
+        
+{% load static %}
     <div class="container">
         <h1>Contact Us</h1>
         <div class="contact-details">
@@ -106,7 +26,5 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.2386935990934!2d144.96305761531885!3d-37.81362777975133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf57764dfd8df28a5!2sTech%20Street%2C%20Melbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1605268329181!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     </div>
-</body>
-</html>
 
 {% endblock %}

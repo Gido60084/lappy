@@ -12,7 +12,10 @@
                         <ul class="nav navbar-nav">
                             <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'homepage' %}">Home</a></li>
                             <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Quick Links </a>
-                                <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="{% url 'services_page' %}">Services</a><a class="dropdown-item" role="presentation" href="{% url 'contact_page' %}">Contact Us</a><a class="dropdown-item" role="presentation" href="{% url 'about' %}">About Us</a></div>
+                                <div class="dropdown-menu" role="menu">
+                                    <a class="dropdown-item" role="presentation" href="{% url 'services_page' %}">Services</a>
+                                    <a class="dropdown-item" role="presentation" href="{% url 'contact_page' %}">Contact Us</a>
+                                    <a class="dropdown-item" role="presentation" href="{% url 'about' %}">About Us</a></div>
                             </li>
                         </ul>
                         <form class="form-inline mr-auto" target="_self">

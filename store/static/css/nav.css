@@ -1,12 +1,20 @@
 *{
  margin: 0;
  }
-
 .header-dark {
     margin-bottom: 0;
     background-color: #0f0f0f;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
+body {
+  display: grid;
+    background: #fff;
+    font-family: 'Manrope', sans-serif;
+}
 
 .header-dark .navbar {
   background:transparent;

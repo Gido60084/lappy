@@ -36,38 +36,38 @@
         </div>
     </div>
 </div>
-    
 
-    
-    
-<div class="row">
-  {% for product in products %}
-    <div class="col-md-3 col-sm-6">
-        <div class="product-grid">
-            <div class="product-image">
-                <a href="#" class="image">
-                    <img class="img-1" src="{{ product.image_url }}">
-                </a>
-                <ul class="product-links">
-                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa fa-eye"></i></a></li>
-                    <li><a href="#"><i class="fa fa-random"></i></a></li>
-                </ul>
-            </div>
-            <div class="product-content">
-                <div class="price">{{ product.price }}</div>
-                <h3 class="title"><a href="#">{{ product.name }}</a></h3>
-                <ul class="rating">
-                    <li class="fas fa-star"></li>
-                    <li class="fas fa-star"></li>
-                    <li class="fas fa-star"></li>
-                    <li class="far fa-star"></li>
-                    <li class="far fa-star"></li>
-                </ul>
-            </div>
-        </div>
+
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  < form method="GET" action="{% url 'search_products' %}" class="input-group mb-3" style="width: 50%;">
+    <input type="text" name="q" class="form-control input-text" placeholder="Search products..." aria-label="Product search" aria-describedby="search-button">
+    <div class="input-group-append">
+      <button class="btn btn-outline-primary btn-lg" type="submit"><i class="fa fa-search"></i></button>
     </div>
+  </form>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    {% for product in products %}
+      <div class="col-md-4 col-sm-6">
+        <div class="card mb-4">
+          <a class="card-img-tiles" href="{% url 'product_detail' product_id=product.id %}" data-abc="true">
+            <div class="image-container">
+              <img src="{{ product.image }}" alt="Category" class="card-img-top">
+            </div>
+          </a>
+          <div class="card-body text-center">
+            <h4 class="card-title">{{ product.name }}</h4>
+            <p class="text-muted">₦{{ product.price }}</p>
+            <a class="btn btn-outline-primary btn-sm" href="{% url 'product_detail' product_id=product.id %}" data-abc="true">View Products</a>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <p>No products found matching your search criteria.</p>
     {% endfor %}
-    
+  </div>
+</div>
+
 {% endblock %}

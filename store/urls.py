@@ -5,7 +5,7 @@ from .views import search_products, product_detail, about_view
 
 urlpatterns = [
     path('', views.homepage, name = 'homepage'),
-    path('product/<int:product_id>/', product_detail, name='product_detail'),
+    path('product/<int:product_id>/', product_detail, name='product_detail.html'),
     path('user_login/', views.user_login, name= 'user_login'),
     path('user_logout/', views.user_logout, name= 'user_logout'),
     path('signup/', views.signup, name= 'signup'),
